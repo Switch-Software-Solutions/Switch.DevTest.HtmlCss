@@ -1,0 +1,29 @@
+.tabs{
+    margin: 2.6rem 2rem 0;
+    &__list{
+        border-bottom: 1px solid color(secondary, 200);
+        display: flex;
+    }
+    &__nav{
+        font-size: map-get($sizes, base);
+        margin-right: 3.2rem;
+        padding-bottom: .7rem;
+        &--active{
+            border-bottom: 3px solid color(primary, 900);
+        }
+        .btn{
+            border: 0;
+            color: color(secondary, 900);
+            padding: 0 .2rem;
+            text-transform: none;
+            &:hover,
+            &:focus{
+                background: none;
+            }
+        }
+    }
+    &__action{
+        margin-top: 2rem;
+        text-align: right;
+    }
+}

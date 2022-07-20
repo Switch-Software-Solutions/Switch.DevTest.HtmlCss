@@ -1,0 +1,82 @@
+.btn{
+    background: none;
+    border: 1px solid color(primary, 900);
+    border-radius: .5rem;
+    color: color(primary, 900);
+    cursor: pointer;
+    display: inline-block;
+    font-size: map-get($sizes, small);
+    font-weight: map-get($weights, medium);
+    padding:.5rem;
+    position: relative;
+    text-transform: uppercase;
+    &__icon{
+        align-items: center;
+        border: 0;
+        border-radius: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 3.6rem;
+        padding: 0;
+        width: 3.6rem;
+        i{
+            font-size: 0;
+            &::before{
+                color: color(primary, 900);
+                font-size: 1.6rem;
+            }
+        }
+    }
+    &__txt{
+        background: #000000;
+        bottom: -4.6rem;
+        border-radius: .3rem;
+        color: color(secondary, 50);
+        display: none;
+        left: 1rem;
+        padding: 1rem;
+        position: absolute;
+        text-transform: none;
+        white-space: nowrap;
+        z-index: 1;
+        &:before{
+            content: "";
+            border-top: 2rem solid transparent;
+            border-bottom: 2rem solid transparent;
+            border-left: 2rem solid #000;
+            display: block;
+            height: 0; 
+            left: 0;
+            position: absolute;
+            top: -1rem;
+            width: 0; 
+            z-index: -1;
+        }
+    }
+    &:hover{
+        background: color(primary, 50);
+        .btn__txt{
+            display: block;
+        }
+    }
+    &:focus{
+        background: color(primary, 100);
+    }
+    &--explode{
+        i{
+            display: inline-block;
+            transform: scale(1) translate(0, 0) rotate(0deg) ;
+            transform-origin: right center;
+            transition: all .4s ease-in;
+        }
+        &:hover{
+            background: color(primary, 900);
+            color:#fddc0b;
+            i{
+                transform: scale(2) translate(-2px, -2px) rotate(-30deg);
+                transition: all .6s ease-in-out;
+            }
+        }
+    }
+}

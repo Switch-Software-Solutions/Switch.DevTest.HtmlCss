@@ -1,0 +1,28 @@
+*, 
+*:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  color: color(secondary, 900);
+  font-family: $font-primary;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-size: map-get($sizes,small);
+	height: 100%;
+	line-height: 1.5;
+}
+a{
+  text-decoration: none;
+}
+
+@include mq-min(xs){
+  body{
+    overflow: hidden;
+  }
+}

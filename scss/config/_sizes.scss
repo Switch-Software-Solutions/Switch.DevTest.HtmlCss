@@ -1,0 +1,25 @@
+$sizes: (    
+   small    : 1.1rem,   
+   base     : 1.4rem,  
+   thumb    : 1.8rem,       
+);
+
+$lineheight: (  
+   lh-small    : 1.4rem,     
+   lh-base     : 1.8rem,     
+   lh-thumb    : 2.4rem,      
+);
+
+$weights: (
+   light    :  300,
+   regular  :  400,
+   medium   :  600,
+);
+
+$breakpoints: (
+   xs   : 540px,
+   sm   : 720px,
+   md   : 960px,
+   lg   : 1140px,
+   xl   : 1440px
+);

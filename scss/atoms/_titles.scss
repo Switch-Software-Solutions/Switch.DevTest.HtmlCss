@@ -1,0 +1,6 @@
+.title{
+    font-size: map-get($sizes, thumb);
+    line-height: map-get($lineheight, thumb);
+    font-weight: map-get($weights, light);
+    margin-bottom: 1.3rem;
+}

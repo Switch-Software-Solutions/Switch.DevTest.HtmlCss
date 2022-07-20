@@ -1,0 +1,30 @@
+$font-size         : 1.6rem;
+$font-primary      : 'Roboto', sans-serif;
+$font-icon         : 'iconFont'; 
+
+@font-face {
+    font-family: $font-primary;
+    src: url('../assets/fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+        url('../assets/fonts/Roboto/Roboto-Light.woff') format('woff');
+    font-weight: map-get($weights, light);
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-primary;
+    src: url('../assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Roboto/Roboto-Regular.woff') format('woff');
+    font-weight: map-get($weights, regular);
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-primary;
+    src: url('../assets/fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Roboto/Roboto-Medium.woff') format('woff');
+    font-weight: map-get($weights, medium);
+    font-style: normal;
+    font-display: swap;
+}

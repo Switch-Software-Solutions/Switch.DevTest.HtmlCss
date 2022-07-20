@@ -1,0 +1,145 @@
+.table-wrapper{
+  height: calc(100vh - 8rem);
+  margin: 2rem;
+}
+table{
+  border: 1px solid color(secondary, 200);
+  border-right: 0;
+  height: 100%;
+  margin-bottom: 2rem;
+  overflow: auto;
+  width: 100%;
+  th,
+  td{
+    border-bottom: 1px solid color(secondary, 200);
+    min-width: 10rem;
+    &:last-child{
+      background: color(secondary, 50);
+      min-width: 11.1rem;
+      position: sticky;
+      right: 0;
+      z-index: 2;
+      &::before,
+      &::after{
+        content: "";
+        background: color(secondary, 200);
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 1px;
+      }
+      &::after{
+        left: inherit;
+        right: 0px;
+        transform: inherit;
+      }
+    }
+  }
+  th{
+    background: color(secondary, 100);
+    font-weight: map-get($weights, medium);
+    padding: 1.1rem;
+    position: relative;
+    text-align: right;
+    &:after{
+      content: "";
+      background: color(secondary, 200);
+      display: block;
+      height: 1.3rem;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: .1rem;
+    }
+    &:first-child,
+    &:nth-child(2){
+      text-align: left;
+    }
+    &:nth-last-child(2){
+      &::after{
+        display: none;
+      }
+    }
+  }
+  td{
+    padding: .9rem;
+    text-align: right;
+    &:first-child{
+      text-align: left;
+    }
+  }
+  tr{
+    background: color(secondary, 50);
+    &:hover{
+      background: color(primary, 50);
+      td{
+        &:last-child{
+          background: color(primary, 50);
+        }
+      }
+    }
+    &.active{
+      background: color(primary, 100);
+      td{
+        &:last-child{
+          background: color(primary, 100);
+        }
+      }
+    }
+  }
+}
+
+.table{
+  &--light{
+    border: 0;
+    height: auto;
+    tr{
+      background: none;
+      &:hover{
+        background: none;
+        td{
+          &:last-child{
+            background: none;
+          }
+        }
+      }
+    }
+    td{
+      text-align: left;
+      &:first-child{
+        border: 0;
+        font-weight: map-get($weights, medium);
+      }
+      &:last-child{
+        background: none;
+        border-left: 0;
+        text-align: left;
+        &::before,
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+  &__item{
+    &--icon{
+      td{
+        &:last-child{
+          text-align: right;
+          .btn{
+            display: inline-flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq-min(xs){
+  .table-wrapper{
+    overflow: auto;
+  }
+}

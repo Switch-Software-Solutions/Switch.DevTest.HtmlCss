@@ -1,0 +1,18 @@
+aside{
+    background: color(secondary, 100);
+    border-right: 1px solid color(secondary, 200);
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+}
+
+.buttons{
+    border-bottom: 1px solid color(secondary, 200);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.15rem 0;
+    &__container{
+        display: flex;
+        margin: 0 1rem;
+    }
+}

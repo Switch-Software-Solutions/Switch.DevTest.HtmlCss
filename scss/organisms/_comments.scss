@@ -1,0 +1,18 @@
+.comments{
+    margin-bottom: 10rem;
+    &__item{
+        border-bottom: 1px dashed color(secondary, 200);
+        font-size: map-get($sizes, base);
+        padding: 1.4rem 0;
+        position: relative;
+    }
+    &__header{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__date{
+        font-size: map-get($sizes, small);
+        color: color(secondary, 200);
+    }
+}
