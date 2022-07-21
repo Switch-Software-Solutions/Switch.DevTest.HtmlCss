@@ -12,13 +12,13 @@ The objective is to deliver a faithful implementation of provided design and pro
 - Javascript is NOT required. Functionality such as perform actions on button clicking should NOT be implemented
 
 ### Repository
-1. Node is required to run the solution. If it's not installed in your local environment, please download and install [Node LTS](https://nodejs.org/en/) or you can use [NVM](https://github.com/nvm-sh/nvm) or [NVM for Windows](https://github.com/coreybutler/nvm-windows) (depending on you OS)
-2. Clone the repository (if you're having troubles cloning: [GitHub Docs - Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
-3. Create a branch from latest master and check out that branch
+1. Node is required to run the solution. If it's not installed in your local environment, please download and install [Node LTS](https://nodejs.org/en/) (or you can use [NVM](https://github.com/nvm-sh/nvm) or [NVM for Windows](https://github.com/coreybutler/nvm-windows), depending on you OS)
+2. Fork the repository (if you're having troubles forking: [GitHub Docs - Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo))
+3. Clone your new repository (if you're having troubles cloning: [GitHub Docs - Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
 4. Go to root folder (../Switch.DevTest.HtmlCss) where you will find all files related to the project
 5. Open a terminal (on that folder) and run `npm start` to start the project (each time you save a scss file, a process will convert that to css and override it inside the css folder. That means that you should wait a couple of seconds before you can see your changes reflected on the screen)
 6. Open the index.html file with a browser
-7. Once you made and pushed all required changes you can ask for a pull request from your branch to submit your test. (if you're having troubles creating a PR: [GitHub Docs - Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request))
+7. Once you made and pushed all required changes you can ask for a pull request from your repository to the original to submit your test. (if you're having troubles creating the PR: [GitHub Docs - Creating a pull request from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork))
 
 Notes:
 - There is no restriction on the amount of commits, you can make (and push) as many as you want
@@ -30,7 +30,7 @@ Notes:
 	```
 	- If I add myStyle.scss to scss folder, that file should be added to build-css as follows
 	```
-	"build-css": "node-sass --include-path scss scss/index.scss css/index.css && node-sass --include-path scss scss/myStyle.scss css/myStyle.css"
+	"build-css": "node-sass --include-path scss scss/styles.scss css/styles.css && node-sass --include-path scss scss/myStyle.scss css/myStyle.css"
 	```
 
 
