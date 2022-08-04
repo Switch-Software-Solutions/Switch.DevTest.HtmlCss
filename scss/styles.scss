@@ -51,8 +51,8 @@ h1 {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 /*Navbar*/
@@ -156,14 +156,14 @@ h1 {
 .details-open {
   display: flex;
   .meteors-main-table {
-    width: 70%;
+    width: calc(100% - 400px);
     margin-left: auto;
   }
 }
 
 /*Details Menu*/
 .details-menu {
-  width: 30%;
+  width: 400px;
   background-color: $gray-100;
   border-right: 1px solid $gray-300;
   height: calc(100vh - 60px);
