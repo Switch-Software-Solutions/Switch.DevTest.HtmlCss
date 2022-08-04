@@ -1,0 +1,659 @@
+<main class="details-open">
+  <section class="details-menu">
+    <div>
+      <header>
+        <div class="action-buttons">
+          <a href="#">
+            <img src="assets/icons/copy.svg" alt="Copy icon" />
+          </a>
+          <a href="#">
+            <img src="assets/icons/bookmark.svg" alt="Bookmark icon" />
+          </a>
+          <a href="#">
+            <img src="assets/icons/trash.svg" alt="Trash icon" />
+          </a>
+        </div>
+        <a href="#" class="close">
+          <img src="assets/icons/close.svg" alt="Close icon" />
+        </a>
+      </header>
+      <div class="tabs">
+        <div>
+          <a href="#" class="active">Details</a>
+          <a href="#">Comments</a>
+        </div>
+      </div>
+      <form action="">
+        <div class="form-group activity-period-info">
+          <label for="activity-period">Activity Period</label>
+          <input id="activity-period" type="text" value="Jan 04" disabled />
+          <a href="#"><img src="assets/icons/info.svg" alt="Info icon" />
+            <div class="info">
+              <h4>Activity Period</h4>
+              <p>
+                The showers are broken down by intensity with major, minor,
+                variable, and weak showers being separated into their own
+                groups. The general public is encouraged to use the list of
+                major showers as they are the most well known and provide the
+                most activity on a year to year basis. The other showers rarely
+                surpass ten meteors per hour at maximum and are difficult to
+                observe by the general public.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="form-group">
+          <label for="maximun-date">Maximun Date</label>
+          <input id="maximun-date" type="text" value="283.3°" disabled />
+        </div>
+        <div class="form-group">
+          <label for="maximum-sl">Maximum S.L.</label>
+          <input id="maximum-sl" type="text" value="15:20" disabled />
+        </div>
+        <div class="form-group">
+          <label for="radiant">Radiant R.A.</label>
+          <input id="radiant" type="text" value="+49.7°" disabled />
+        </div>
+        <div class="form-group">
+          <label for="radiant-desc">Radiant Desc.</label>
+          <input id="radiant-desc" type="text" value="40.2" disabled />
+        </div>
+        <div class="form-group">
+          <label for="velocity">Velocity km/s</label>
+          <input id="velocity" type="text" value="2.1" disabled />
+        </div>
+        <div class="form-group">
+          <label for="r">R</label>
+          <input id="r" type="text" value="120" disabled />
+        </div>
+        <div class="form-group">
+          <label for="time">Time</label>
+          <input id="time" type="text" value="0500" disabled />
+        </div>
+        <div class="form-group">
+          <label for="moon">Moon</label>
+          <input id="moon" type="text" value="02" disabled />
+        </div>
+        <div class="form-group">
+          <label for="quadrantids">Quadrantids</label>
+          <input id="quadrantids" type="text" value="GBP" disabled />
+        </div>
+        <div class="form-group">
+          <label for="lyrids">Lyrids</label>
+          <input id="lyrids" type="text" value="9.0000%" disabled />
+        </div>
+        <div class="form-group">
+          <label for="perseids">Perseids</label>
+          <input id="perseids" type="text" value="GBP" disabled />
+        </div>
+        <div class="form-group">
+          <label for="eta-aquarids">eta Aquarids</label>
+          <input id="eta-aquarids" type="text" value="8,257.50" disabled />
+        </div>
+        <div class="submit-buttons">
+          <a href="#" class="btn-save"
+            ><img src="assets/icons/floppy.svg" alt="Save icon" /> Save</a
+          >
+          <a href="#" class="btn-explode"
+            ><img src="assets/icons/flame.svg" alt="Explode icon" /> Explode</a
+          >
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="meteors-main-table container">
+    <h1>My Meteors</h1>
+    <div class="table-wrapper">
+      <table cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th><span>Maximum date</span></th>
+            <th><span>Maximum S.L.</span></th>
+            <th><span>Radiant R.A.</span></th>
+            <th><span>Radiant Desc.</span></th>
+            <th><span>Velocity km/s</span></th>
+            <th><span>R</span></th>
+            <th><span>Max ZHR</span></th>
+            <th><span>Time</span></th>
+            <th><span>Moon</span></th>
+            <th><span>Quadrantids</span></th>
+            <th><span>Lyrids</span></th>
+            <th><span>Perseids</span></th>
+            <th><span>eta Aquarids</span></th>
+            <th><span>Activity Period</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr class="selected">
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+          <tr>
+            <td>Jan 04</td>
+            <td>283.3°</td>
+            <td>15:20</td>
+            <td>+49.7°</td>
+            <td>40.2</td>
+            <td>2.1</td>
+            <td>120</td>
+            <td>0500</td>
+            <td>02</td>
+            <td>10/19/2020</td>
+            <td>9.0000%</td>
+            <td>GBP</td>
+            <td>8,257.50</td>
+            <td>Dec 26-Jan 16</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
