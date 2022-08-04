@@ -1,17 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /*Colors*/
-$primary-color: #c75a4c;
-$black-color: #000000;
-$white-color: #ffffff;
+$primary-900: #ed6a5a;
+$black: #000000;
+$white: #ffffff;
+$gray-100: #fafafa;
+$gray-300: #cccccc;
+$gray-900: #565656;
 
 /*Fonts*/
 $primary-font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
   "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif;
+$secondary-font-family: "IBM Plex Sans", sans-serif;
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-300;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $gray-300;
+}
 
 body {
   font-family: $primary-font-family;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 300;
+  color: $gray-900;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: $primary-900;
+  .logo {
+    img {
+      display: block;
+      height: 40px;
+      width: auto;
+    }
+  }
+}
+
+.meteors-main-table {
+  padding-bottom: 50px;
+  h1 {
+    margin: 20px 0 13px 0;
+  }
+  .table-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 150px);
+    border: 1px solid $gray-300;
+    border-radius: 5px;
+    overflow: auto;
+
+    table {
+      width: 100%;
+      margin: auto;
+      table-layout: fixed;
+      font-size: 11px;
+      font-family: $secondary-font-family;
+
+      thead {
+        th {
+          width: 100px;
+          padding: 10px 0;
+          font-weight: 500;
+          background-color: $white;
+          border-bottom: 1px solid $gray-300;
+          &:last-child {
+            width: 111px;
+            position: sticky;
+            right: 0;
+            border-left: 1px solid $gray-300;
+            border-bottom: 1px solid $gray-300;
+          }
+          span {
+            display: block;
+            padding: 2px 0;
+            border-right: 1px solid $gray-300;
+          }
+          &:nth-last-child(2) {
+            span {
+              border-right: none;
+            }
+          }
+          &:last-child {
+            position: sticky;
+            top: 0;
+            span {
+              border-right: none;
+            }
+          }
+        }
+      }
+      tbody {
+        td {
+          font-weight: 300;
+          background-color: $white;
+          padding: 9px;
+          border-bottom: 1px solid $gray-300;
+          &:last-child {
+            width: 111px;
+            position: sticky;
+            right: 0;
+            border-left: 1px solid $gray-300;
+            border-bottom: 1px solid $gray-300;
+          }
+        }
+      }
+    }
+  }
 }
