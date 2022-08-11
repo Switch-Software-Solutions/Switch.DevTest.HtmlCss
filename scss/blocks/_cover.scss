@@ -1,0 +1,17 @@
+.cover {
+	padding: 1em;
+	background: $primary-900;
+	color: $white;
+}
+
+.cover__title {
+	margin-bottom: 0.25em;
+	text-transform: uppercase;
+	font-size: $xlarge;
+	font-weight: 700;
+}
+
+.cover__text {
+	text-align: center;
+	font-size: $large;
+}

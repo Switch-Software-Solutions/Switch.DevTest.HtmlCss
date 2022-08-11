@@ -1,0 +1,36 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: $font-primary;
+	font-size: $body;
+	-webkit-font-smoothing: antialiased;
+}
+
+input {
+	padding: 3px 10px;
+	border-bottom: 1px solid $gray-300;
+	color: $gray-900;
+
+	&:hover {
+		border-bottom-color: $primary-900;
+	}
+}
+
+textarea {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid $gray-300;
+	background: $white;
+	font-size: $xbody;
+
+	&::placeholder {
+		color: $gray-300;
+	}
+
+	&:hover {
+		border-color: $primary-900;
+	}
+}
