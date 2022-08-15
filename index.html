@@ -14,6 +14,33 @@
     <script>
         includeHTML();
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $('#close').on('click', function() {
+            $('tr').removeClass('is-selected');
+            $('#main').addClass('has-sidebar-collapsed');
+        });
+
+        $('tr').on('click', function() {
+            $('tr').removeClass('is-selected');
+            $('#main').removeClass('has-sidebar-collapsed');
+            $(this).addClass('is-selected');
+        });
+
+        $('.tooltip__trigger').on('click', function() {
+            $(this).parents('.tooltip').toggleClass('is-visible');
+        });
+
+        $('.tabs__link').on('click', function() {
+            $('.tabs__link').removeClass('is-selected');
+            $(this).addClass('is-selected');
+
+            $('.tabs__tab').hide();
+            $($(this).attr('href')).show();
+        });
+    </script>
 </body>
 
 </html>
