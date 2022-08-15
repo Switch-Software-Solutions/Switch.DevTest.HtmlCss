@@ -1,9 +1,9 @@
-.tooltip {
+.popover {
 	position: relative;
 	z-index: 1;
 }
 
-.tooltip__dialog {
+.popover__dialog {
 	--width: 408px;
 	--triangle-size: 13px;
 	position: absolute;
@@ -51,19 +51,19 @@
 	}
 }
 
-.tooltip__title {
+.popover__title {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: $medium;
 	font-weight: 200;
 }
 
-.tooltip__close {
+.popover__close {
 	position: absolute;
 	top: 5px;
 	right: 5px;
 }
 
-.tooltip__trigger {
+.popover__trigger {
 	cursor: pointer;
 }
