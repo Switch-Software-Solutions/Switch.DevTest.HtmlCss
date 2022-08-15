@@ -15,9 +15,10 @@ $sidebar-width: 382px;
 	flex-basis: $sidebar-width;
 	background: $gray-100;
 	border: 1px solid $gray-300;
+	transition: margin 300ms;
 
 	.has-sidebar-collapsed & {
-		display: none;
+		margin-left: -$sidebar-width;
 	}
 }
 
