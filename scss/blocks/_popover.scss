@@ -5,7 +5,7 @@
 
 .popover__dialog {
 	--width: 408px;
-	--triangle-size: 13px;
+	--triangle-size: #{$triangle-size};
 	position: absolute;
 	width: var(--width);
 	top: 40px;

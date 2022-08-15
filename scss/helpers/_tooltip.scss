@@ -1,0 +1,45 @@
+.tooltip {
+	--triangle-size: #{$triangle-size};
+	position: relative;
+	z-index: 1;
+
+	&:before,
+	&:after {
+		left: 50%;
+		opacity: 0;
+		visibility: hidden;
+		transform: translate3d(0, -10px, 0);
+		transition: all 300ms;
+	}
+
+	&:before {
+		content: attr(data-tooltip);
+		position: absolute;
+		top: 100%;
+		padding: 12px 10px;
+		border-radius: 0 3px 3px;
+		white-space: nowrap;
+		font-size: $xbody;
+		font-weight: 500;
+		color: $white;
+		background: $black;
+		visibility: hidden;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		width: var(--triangle-size);
+		position: absolute;
+		top: calc(100% - var(--triangle-size));
+		border-right: calc(var(--triangle-size) + 1px) solid transparent;
+		border-bottom: calc(var(--triangle-size) + 1px) solid $black;
+	}
+
+	&:hover:before,
+	&:hover:after {
+		opacity: 1;
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+	}
+}
