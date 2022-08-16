@@ -1,0 +1,67 @@
+.btn {
+	display: inline-flex;
+	margin: 0 3px;
+	padding: 5px;
+	border-radius: 3px;
+	color: $white;
+	background: $primary-900;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border: 1px solid $primary-900;
+	cursor: pointer;
+	transition: all 150ms;
+
+	&:hover {
+		color: $primary-900;
+		background: $primary-100;
+	}
+
+	&:active {
+		cursor: pointer;
+		color: $yellow;
+		background: $primary-900;
+	}
+}
+
+.btn--inverted {
+	color: $primary-900;
+	background: transparent;
+}
+
+.btn__img {
+	display: inherit;
+	margin-right: 5px;
+
+	> svg {
+		fill: $white;
+		transition: all 150ms;
+
+		.btn--inverted & {
+			fill: $primary-900;
+		}
+	}
+
+	.btn:hover & > svg {
+		fill: $primary-900;
+	}
+
+	.btn:active & > svg {
+		fill: $yellow;
+		transform: scale(2.5) rotate(-20deg) translate3d(-2px, -2px, 0px);
+	}
+}
+
+.btn-icon {
+	border-radius: 100%;
+	padding: 0 1.5px;
+
+	&:hover {
+		cursor: pointer;
+		background: $primary-100;
+	}
+
+	&:active {
+		background: $primary-300;
+	}
+}

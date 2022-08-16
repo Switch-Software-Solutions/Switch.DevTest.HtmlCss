@@ -1,6 +1,14 @@
-<img src="assets/logo.svg">
+<!-- uncomment this section to get the cover page -->
+<!--<img src="assets/logo.svg">
 <h2>METEOR</h2>
-<div include-html="html/greetings.html"></div>
+<div include-html="html/greetings.html"></div>-->
 
-<!-- uncomment this section to get the default table -->
-<!-- <div include-html="html/content.html"></div> -->
+<nav class="nav" include-html="html/nav.html"></nav>
+
+<main id="main" class="main-layout__main">
+
+	<section class="main-layout__sidebar" include-html="html/sidebar.html"></section>
+
+	<section class="main-layout__content padded-container" include-html="html/content.html"></section>
+
+</main>
