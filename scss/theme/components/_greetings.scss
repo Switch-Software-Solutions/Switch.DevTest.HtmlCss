@@ -1,0 +1,32 @@
+.greetings-section {
+  height: 100vh;
+  background-color: #ed6a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  /*Margin and padding of previous section*/
+  top: calc(3.4rem + 2rem);
+  &__container {
+    max-width: 12rem;
+    &__logo {
+      height: 25.7rem;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 7.4rem;
+      line-height: 9.6rem;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 3.1rem;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}

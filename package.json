@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm install && concurrently --kill-others \"node fileFetcher.js\" \"npm run watch-css\"",
-    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css && node-sass --include-path scss scss/theme/components/_header.scss css/theme/components/_header.css && node-sass --include-path scss scss/theme/components/_content.scss css/theme/components/_content.css && node-sass --include-path scss scss/theme/components/_greetings.scss css/theme/components/_greetings.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
