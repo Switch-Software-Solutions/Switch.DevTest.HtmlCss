@@ -1,0 +1,61 @@
+//content
+.bg-main{
+    background-color: $colorMain;
+}
+.main-nosidebar{
+    transition: all .4s;
+    margin-left: 20px;
+}
+main{
+    margin: 80px 20px 20px 443px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+
+    table{
+        border-collapse: collapse;
+        table-layout: fixed;
+        font-size: 11px;
+        border: 1px solid $grey;
+        border-radius: 1em;
+        overflow-x: auto;
+        width: 100%;
+        thead tr th{
+            background-color: #fafafa;
+            font-weight: 500;
+            padding: 11px;
+            position: relative;
+            text-align: right;
+            &:after:not(.last-th){
+                content: '';
+                height: 40%; //You can change this if you want smaller/bigger borders
+                width: 1px;
+                position: absolute;
+                right: 0;
+                top: 30%; // If you want to set a smaller height and center it, change this value
+                background-color: $grey; // The color of your border 
+            }
+            &:last-child{
+                border-left: 1px solid $grey;
+                position: sticky;
+                right: 0;
+            }
+        }
+        tbody tr{
+            border-top: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            td{
+                text-align: right;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                background-color: white;
+                &:last-child{
+                    border:1px solid $grey;
+                    position: sticky;
+                    right: 0;
+                }
+            }
+           
+        }
+       
+    }
+}
