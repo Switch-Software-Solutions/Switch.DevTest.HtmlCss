@@ -1,0 +1,14 @@
+.main-header {
+  background-color: #ed6a5a;
+  text-align: left;
+  padding: 1rem;
+  margin-bottom: 3.4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  &__logo {
+    width: 4rem;
+  }
+}
