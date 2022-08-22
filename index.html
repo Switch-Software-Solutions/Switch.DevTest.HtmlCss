@@ -6,15 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Meteor</title>
 </head>
 
 <body>
-    <div include-html="html/layout.html"></div>
-
+    <div include-html="html/sidebar.html"></div>
+    <div include-html="html/header.html"></div>
+    <div include-html="html/content.html"></div>
     <script>
         includeHTML();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            //close sidebar
+            var sideBarCloseElement = document.getElementById("side-bar-close");
+            if (sideBarCloseElement){
+                sideBarCloseElement.addEventListener('click', function() {
+            
+                var element = document.getElementById("sidebar");
+                element.classList.add("sidebar-hidden");
+            
+                var main = document.getElementById("main");
+                main.classList.add("main-nosidebar");
+            
+            
+                });
+            }
+            
+            
+            //opensidebar
+            var sideBarOpenElement = document.getElementById("sidebar-open");
+            if(sideBarOpenElement){
+                sideBarOpenElement.addEventListener('click', function() {
+            
+                var sidebar = document.getElementById("sidebar");
+                sidebar.classList.remove("sidebar-hidden");
+            
+                var main = document.getElementById("main");
+                main.classList.remove("main-nosidebar");
+            
+            
+            });
+            }
+
+        });
     </script>
 </body>
 

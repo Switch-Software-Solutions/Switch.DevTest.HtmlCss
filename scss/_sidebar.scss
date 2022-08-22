@@ -1,0 +1,100 @@
+aside{
+    @include scrollbar ($width:5px, $height:8px);
+    background-color: $lightGrey;
+    width: 383px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    overflow: auto;
+    z-index: 1;
+    -webkit-transition: all 0.4s;
+    padding: 20px;
+    border-right: 1px solid $grey;
+   
+    .sidebar-icons-top{
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sidebar-icons-top-left{
+        img{
+           color: $colorMain;     
+        }
+    }
+    .sidebar-content{
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 1px solid $grey;
+            padding-left: 0;
+            margin-top: 30px;
+            li{
+                margin-right: 30px;
+                font-size: 14px;
+                font-weight: normal;
+                &.active{
+                    border-bottom: 3px solid $colorMain;
+                }
+            }
+          }
+
+        .sidebar-details{
+            .sidebar-details__item{
+                display: flex;
+                align-items: center;
+                
+               
+                h1{
+                    font-size: 11px;
+                    font-weight: 500;
+                    padding-bottom: 5px;
+                    min-width: 120px;
+                }
+                p{
+                    font-size: 11px;
+                    border-bottom: 1px solid $grey;
+                    width: 60%;
+                    padding-bottom: 5px;
+                    margin-left: 5px;
+                }
+                img{
+                    color: $colorMain;
+                    padding-bottom: 5px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .sidebar-buttons{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                text-transform: uppercase;
+                color: $colorMain;
+                font-size: 11px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $colorMain;
+                padding: 5px;
+                border-radius: 3px;
+                margin-right: 10px;
+                &.main{
+                    background-color: $colorMain;
+                    color: white;
+                }
+                img{
+                    margin-right: 3px;
+                   
+                }
+            }
+        }
+    }
+}
+
+//sidebar
+.sidebar-hidden{
+    margin-left: -483px;
+  }

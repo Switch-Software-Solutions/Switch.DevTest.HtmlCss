@@ -1,0 +1,17 @@
+//header
+header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: $colorMain;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+    img{
+        width: 40px;
+        margin-left: 10px;
+    }
+
+}
