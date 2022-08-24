@@ -1,0 +1,87 @@
+.meteors-table {
+  $met: &;
+
+  border: 1px solid $borderColor;
+  display: block;
+  border-radius: 3px;
+  border-spacing: 0;
+  overflow: auto;
+  width: 100%;
+
+  &__heading {
+    background: $lightBackground;
+
+    #{$met}__cell {
+      font-weight: 500;
+      position: relative;
+      padding: 1rem;
+      border-bottom: 1px solid $borderColor;
+
+      &:after { 
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1px;
+        background: $borderColor;
+        height: $text-s;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:last-of-type::after,
+      &:nth-last-of-type(2)::after {
+        display: none;
+      }
+
+      &.--fixed {
+        background: $lightBackground !important;
+      }
+    }
+
+    #{$met}__row:hover {
+      background: none;
+      cursor: default;
+    }
+  }
+
+  &__row {
+    &:not(:last-of-type) {
+      #{$met}__cell {
+        border-bottom: 1px solid $borderColor;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100px;
+    }
+
+    &:hover {
+      background: $accentLightest;
+      cursor: pointer;
+
+      #{$met}__cell.--fixed {
+        background: $accentLightest;
+      }
+    }
+  }
+  
+
+  &__cell {
+    text-align: right;
+    padding: 0.9rem;
+    min-width: 100px;
+    
+    &:first-of-type {
+      text-align: left;
+    }
+    
+    &.--fixed {
+      background: $lightestBackground;
+      position: absolute;
+      right:21px;
+      border-left: 1px solid $borderColor;
+    }
+  }
+}
