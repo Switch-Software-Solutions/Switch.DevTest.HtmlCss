@@ -12,4 +12,25 @@ body, html {
   margin: 0;
   padding: 0;
   font-weight: 300;
+
+}
+
+body {
+  &::-webkit-scrollbar {
+    width: 18px;
+    background: $lightestBackground;
+  }
+  
+  &::-webkit-scrollbar-track {
+    width: 18px;
+    background: linear-gradient(to top, $lightestBackground calc(100% - 60px), $accent 60px);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    width: 18px;
+    border-radius: 12px;
+    background-clip: content-box;
+    background-color: $borderColor;
+    border: 6px solid transparent;
+  }
 }

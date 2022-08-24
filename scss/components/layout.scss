@@ -1,6 +1,21 @@
 .meteors {
   padding-top: 60px;
   display: flex;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+    background-color: $borderColor;
+  }
 }
 
 .item-details {
@@ -8,6 +23,10 @@
   width: 380px;
   margin-left: -380px;
   transition: all .5s ease;
+  border-right: 1px solid $borderColor;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
 
   &.--open {
     margin-left: 0;
@@ -15,6 +34,31 @@
     & + .table {
       width: calc(100% - 380px);
     }
+  }
+
+  &__nav {
+    height: 40px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  &__actions {
+    display: flex;
+
+    button {
+      background: none;
+      border: none;
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    padding: 20px;
   }
 }
 

@@ -1,3 +1,28 @@
+const row = 'meteors-table__row';
+const selectedClass = '--selected';
+const openClass = '--open';
+const detailsPanel = 'item-details';
+
+function closeDetailsPanel() {
+  document.querySelector(`.${detailsPanel}`).classList.remove(openClass);
+}
+
+function resetSelectedItems() {
+  const rows = Array.from(document.querySelectorAll(`.${row}`));
+  rows.forEach(rowItem => rowItem.classList.remove(selectedClass));
+}
+
+function setSelectedItem() {
+  document.addEventListener('click', (e) => {
+    const parent = e.target.parentElement;
+    if (parent.className.includes(row)) {
+      resetSelectedItems();
+      parent.classList.add(selectedClass);
+      document.querySelector(`.${detailsPanel}`).classList.add(openClass);
+    }
+  });
+}
+
 function includeHTML() {
     var z, i;
     z = document.getElementsByTagName("*");
