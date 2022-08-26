@@ -1,52 +1,36 @@
-h1.main-header {
-    color: white; font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-}
+@import './theme/theme';
+@import './components/components';
 
-p {
-    color: black;
-    font-size: 20px;
-}
-
-body { background-color: gainsboro; h1 { color: darkorange; text-align: center; font-size: 40px; }}
-
-h2 {
-    font-size: 74px;
-}
 * {
-    font-weight: normal;;
-    background-color: #c75a4c;
-    colour: black;
-
-
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
+  box-sizing: border-box;
+  font-family: $mainFont;
 }
 
-img {
-    margin-top: 200px;
+body, html {
+  font-family: $mainFont;
+  color: $textColor;
+  font-size: $text-s;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
 }
 
-p { color: white; margin: 0 }
-
-body h1 {
-    margin-top: 50px;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 0px
+body {
+  &::-webkit-scrollbar {
+    width: 18px;
+    background: $lightestBackground;
+  }
+  
+  &::-webkit-scrollbar-track {
+    width: 18px;
+    background: linear-gradient(to top, $lightestBackground calc(100% - 60px), $accent 60px);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    width: 18px;
+    border-radius: 12px;
+    background-clip: content-box;
+    background-color: $borderColor;
+    border: 6px solid transparent;
+  }
 }
-
-span {
-    color: white;
-}
-
-p, h1, span { font-size: 24px; }
-
-h2 { color: white; margin: 20px 0 40px 0
-;font-weight: bold; }

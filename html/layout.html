@@ -1,6 +1,193 @@
-<img src="assets/logo.svg">
-<h2>METEOR</h2>
-<div include-html="html/greetings.html"></div>
+<header class="header">
+  <a class="header__logo" href="#">
+    <img src="assets/logo.svg">
+  </a>
+</header>
 
-<!-- uncomment this section to get the default table -->
-<!-- <div include-html="html/content.html"></div> -->
+<main class="meteors">
+  <aside class="item-details">
+    <div class="item-details__nav">
+      <div class="item-details__actions">
+        <button class="item-details__action" data-tooltip="Copy">
+          <i class="icon item-details__nav-icon">
+            <svg class="icon__copy">
+              <use xlink:href="#copy"></use>
+            </svg>
+          </i>
+        </button>
+        <button class="item-details__action" data-tooltip="Bookmark">
+          <i class="icon item-details__nav-icon">
+            <svg class="icon__bookmark">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+          </i>
+        </button>
+        <button class="item-details__action" data-tooltip="Delete">
+          <i class="icon item-details__nav-icon">
+            <svg class="icon__trash">
+              <use xlink:href="#trash"></use>
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div class="item-details__actions">
+        <button class="item-details__action" onclick="closeDetailsPanel()" data-tooltip="Close Details">
+          <i class="icon item-details__nav-icon">
+            <svg class="icon__close">
+              <use xlink:href="#close"></use>
+            </svg>
+          </i>
+        </button>
+      </div>
+    </div>
+    <div class="item-details__content">
+      <ul class="item-details__tabs">
+        <li class="item-details__tab --active" data-tab-nav="tab-details">
+          <button onclick="setActiveTab('tab-details')">Details</button>
+        </li>
+        <li class="item-details__tab" data-tab-nav="tab-comments">
+          <button onclick="setActiveTab('tab-comments')">Comments</button>
+        </li>
+      </ul>
+      <div data-tab-content="tab-details" class="item-details__tab-content --active">
+        <form class="form">
+          <div class="form__group">
+            <label class="form__label">Activity Period</label>
+            <input class="form__input" value="Jan 04" />
+            <div class="form__field-tooltip">
+              <button class="form__field-tooltip-open" onclick="openTooltip('#activity-period-tooltip')">
+                <i class="icon item-details__tooltip-icon">
+                  <svg class="icon__tooltip">
+                    <use xlink:href="#tooltip"></use>
+                  </svg>
+                </i>
+              </button>
+              <div id="activity-period-tooltip" class="form__field-tooltip-content">
+                <button class="form__field-tooltip-close" onclick="closeTooltip('#activity-period-tooltip')">
+                  <i class="icon form__field-tooltip-icon">
+                    <svg class="icon__close">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </i>
+                </button>
+                <h3 class="form__field-tooltip-title">Activity Period</h3>
+                <p class="form__field-tooltip-text">The showers are broken down by intensity with major, minor, variable, and weak showers being separated into their own groups. The general public is encouraged to use the list of major showers as they are the most well known and provide the most activity on a year to year basis. The other showers rarely surpass ten meteors per hour at maximum and are difficult to observe by the general public.</p>
+              </div>
+            </div>
+          </div>
+          <div class="form__group">
+            <label class="form__label">Maximum Date</label>
+            <input class="form__input" value="283.3°" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Maximum S.L.</label>
+            <input class="form__input" value="15:20" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Radiant R.A.</label>
+            <input class="form__input" value="+49.7°" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Radiant Desc.</label>
+            <input class="form__input" value="40.2" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Velocity km/s</label>
+            <input class="form__input" value="2.1" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">R</label>
+            <input class="form__input" value="120" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Time</label>
+            <input class="form__input" value="0500" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Moon</label>
+            <input class="form__input" value="02" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Quadrantids</label>
+            <input class="form__input" value="GBP" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Lyrids</label>
+            <input class="form__input" value="9.0000%" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Perseids</label>
+            <input class="form__input" value="GBP" />
+          </div>
+          <div class="form__group">
+            <label class="form__label">eta Aquarids</label>
+            <input class="form__input" value="8,257.50" />
+          </div>
+          <div class="form__actions">
+            <button type="button" class="form__button form__button--save">
+              <i class="icon form__save">
+                <svg class="icon__save">
+                  <use xlink:href="#save"></use>
+                </svg>
+              </i>
+              Save
+            </button>
+            <button type="button" class="form__button form__button--explode">
+              <i class="icon form__explode">
+                <svg class="icon__explode">
+                  <use xlink:href="#explode"></use>
+                </svg>
+              </i>
+              Explode
+            </button>
+          </div>
+        </form>
+      </div>
+      <div data-tab-content="tab-comments" class="item-details__tab-content">
+        <form>
+          <div class="form__textbox">
+            <textarea class="form__textarea" placeholder="Write your comment"></textarea>
+            <button class="form__send">
+              <i class="icon form__send-icon">
+                <svg class="icon__send">
+                  <use xlink:href="#send"></use>
+                </svg>
+              </i>
+            </button>
+          </div>
+        </form>
+        <ul class="comments">
+          <li class="comments__message">
+            <h3 class="comments__message-heading">
+              <span class="_author">Charles Mayer</span>
+              <span class="_date">Oct 16, 17:23 AM</span>
+            </h3>
+            <p class="comments__message-text">
+              This appears to be a different program.<br>
+              Please set up as: 556*1989<br>
+              Thanks!
+            </p>
+          </li>
+          <li class="comments__message">
+            <h3 class="comments__message-heading">
+              <span class="_author">Charles Mayer</span>
+              <span class="_date">Oct 16, 17:23 AM</span>
+            </h3>
+            <p class="comments__message-text">
+              CFG<br>
+              LOOKS LIKE THIS IS TREATY 556, THERE IS A CLAIM SET UP 556*1990*50, HOWEVER THE CLAIMANT IS DIFFERENT
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <section class="table">
+    <h1 class="table__title">My Meteors</h1>
+    <div class="table__wrapper">
+      <div include-html="html/content.html"></div>
+    </div>
+  </section>
+</main>
+
+<div include-html="html/icons.html"></div>

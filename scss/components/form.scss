@@ -1,0 +1,258 @@
+@keyframes explode {
+  0% {}
+  50% {
+    color: $accentVariant;
+    background: $accent;
+  }
+  100% {}
+}
+
+@keyframes iconExplode {
+  0% {}
+  50% {
+    transform: scale3d(2.2,2.2,2.2) rotate(-20deg);
+  }
+  100% {}
+}
+
+.form {
+  $f: &;
+
+  &__group {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2rem;
+    margin-bottom: 6px;
+    align-items: center;
+
+    @media (min-width: 900px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+  }
+
+  &__input {
+    transition: all .3s ease;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $borderColor;
+    font-size: $text-s;
+    padding: 3px 10px;
+    font-weight: 300;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $accent;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  &__button {
+    transition: all .3s ease;
+    display: inline-flex;
+    align-items: center;
+    height: 23px;
+    border: 1px solid $accent;
+    background: $accent;
+    color: $textLight;
+    border-radius: 3px;
+    gap: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: $text-s;
+    letter-spacing: 1px;
+    padding: 5px;
+    cursor: pointer;
+
+    &--explode {
+      background: transparent;
+      color: $accent;
+    }
+
+    &:hover {
+      background: $accentLight;
+      color: $accent;
+    }
+
+    &.--animate {
+      animation: explode 1s linear;
+
+      i {
+        animation: iconExplode 1s linear;
+      }
+    }
+  }
+
+  &__explode {
+    width: 14px;
+    height: 16px;
+  }
+
+  &__save {
+    width: 17px;
+  }
+
+  &__textbox {
+    display: flex;
+
+    #{$f}__textarea {
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+
+      &:focus + #{$f}__send {
+        border-color: $accent;
+      }
+    }
+
+    #{$f}__send {
+      border-left: none;
+      border-radius: 0 5px 5px 0;
+    }
+
+    &:hover {
+      #{$f}__textarea, 
+      #{$f}__send {
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__textarea {
+    transition: all .3s ease;
+    background: $lightestBackground;
+    border: 1px solid $borderColor;
+    min-height: 3rem;
+    flex-grow: 2;
+    width: calc(100% - 30px);
+    border-radius: 5px;
+    resize: none;
+    padding: .5rem 1rem;
+    font-weight: 300;
+
+    &:hover,
+    &:focus {
+      border-color: $accent;
+      outline: none;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: $borderColor;
+    }
+  }
+
+  &__send {
+    transition: all .3s ease;
+    background: $lightestBackground;
+    border-radius: 5px;
+    border: 1px solid $borderColor;
+    cursor: pointer;
+    color: $accent;
+    
+    &:hover {
+      background: $accentLightest;
+    }
+  }
+
+  &__field-tooltip {
+    position: relative;
+  }
+
+  &__field-tooltip-open {
+    transition: all .3s ease;
+    background: none;
+    color: $accent;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: $accentLightest;
+    }
+  }
+
+  &__field-tooltip-close {
+    background: none;
+    color: $textColor;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  
+  &__field-tooltip-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    background: $tooltipLight;
+    padding: 2rem;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+
+    &.--open {
+      display: block;
+    }
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 0;
+      border-left: 10px solid $tooltipLight;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% - 10px);
+      filter: drop-shadow(-1px 0 0 var(--color-gray-300)) drop-shadow(0 -1px 0 var(--color-gray-300));
+      z-index: 10;
+    }
+
+    &:after {
+      content: '';
+      width: 20px;
+      height: 10px;
+      background:$tooltipLight;
+      position: absolute;
+      left: calc(50% - 5px);
+      bottom: calc(100% - 10px);
+      z-index: 20;
+    }
+  }
+
+  &__field-tooltip-title {
+    margin: 0 0 .5rem;
+    font-weight: 300;
+    font-size: $text-l;
+  }
+
+  &__field-tooltip-text {
+    font-size: $text-m;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
