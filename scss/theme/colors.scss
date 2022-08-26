@@ -8,6 +8,7 @@
   --color-gray-900: #565656;
   --color-yellow: #fddc0b;
   --color-white: #fff;
+  --color-black: #000;
 }
 
 $accent: var(--color-primary-900);
@@ -16,5 +17,8 @@ $accentLight: var(--color-primary-300);
 $accentLightest: var(--color-primary-100);
 $borderColor: var(--color-gray-300);
 $textColor: var(--color-gray-900);
+$textLight: var(--color-white);
 $accentVariant: var(--color-yellow);
 $lightestBackground: var(--color-white);
+$tooltipDark: var(--color-black);
+$tooltipLight: var(--color-white);

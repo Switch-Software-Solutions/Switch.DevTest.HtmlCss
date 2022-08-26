@@ -26,6 +26,7 @@
 
   &__heading {
     background: $lightBackground;
+    pointer-events: none;
 
     #{$met}__cell {
       font-weight: 500;

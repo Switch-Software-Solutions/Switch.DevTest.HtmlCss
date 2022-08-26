@@ -1,6 +1,7 @@
 .meteors {
   padding-top: 60px;
   display: flex;
+
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -20,19 +21,37 @@
 
 .item-details {
   background: $lightBackground;
-  width: 380px;
-  margin-left: -380px;
+  width: 100%;
   transition: all .5s ease;
-  border-right: 1px solid $borderColor;
-  position: sticky;
-  top: 60px;
-  height: calc(100vh - 60px);
+  position: fixed;
+  top: 30%;
+  z-index: 2000;
+  bottom: 0;
+  transform: translateY(100%);
+  border-top: 1px solid $borderColor;
+  box-shadow: -3px 0 6px rgba(0,0,0,.15);
+  
+  @media (min-width: 900px) {
+    border-top: none;
+    margin-left: -380px;
+    border-right: 1px solid $borderColor;
+    width: 380px;
+    height: calc(100vh - 60px);
+    position: sticky;
+    bottom: initial;
+    top: 60px;
+    transform: translateY(0);
+    box-shadow: none;
+  }
 
   &.--open {
     margin-left: 0;
+    transform: translateY(0);
 
     & + .table {
-      width: calc(100% - 380px);
+      @media (min-width: 900px) {
+        width: calc(100% - 380px);
+      }
     }
   }
 
@@ -46,19 +65,104 @@
 
   &__actions {
     display: flex;
+  }
 
-    button {
-      background: none;
-      border: none;
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      cursor: pointer;
+  &__action {
+    transition: all .3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+
+    &:hover {
+      background: $accentLightest;
     }
   }
 
   &__content {
     padding: 20px;
+  }
+
+  &__nav-icon {
+    width: 30px;
+    height: 30px;
+    color: $accent;
+  }
+
+  &__tabs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  &__tab {
+    position: relative;
+
+    &:after {
+      transition: all .3s ease;
+      content: '';
+      height: 3px;
+      background: $accent;
+      position: absolute;
+      bottom: -1px;
+    }
+
+    &:first-child:after {
+      left: 100%;
+      right:0;
+    }
+
+    &:last-child:after {
+      right: 100%;
+      left:0;
+    }
+
+    &.--active {
+      &:first-child:after {
+        left: 0;
+      }
+  
+      &:last-child:after {
+        right: 0;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      padding: .5rem .7rem;
+      font-size: $text-m;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+
+  &__tab-content {
+    display: none;
+    padding-top: 1rem;
+
+    &.--active {
+      display: block;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+    background-color: $borderColor;
   }
 }
 
@@ -74,5 +178,38 @@
     font-size: $text-l;
     font-weight: 300;
     margin: 0 0 10px;
+  }
+}
+
+.comments {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+
+  &__message {
+    border-bottom: 1px dashed $borderColor;
+    padding-bottom: 1.2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__message-heading {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    margin: 0;
+
+    ._date {
+      color: $borderColor;
+      font-weight: 300;
+      font-size: .8em;
+    }
+  }
+
+  &__message-text {
+    font-weight: 300;
+    margin: 0;
   }
 }

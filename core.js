@@ -1,24 +1,74 @@
 const row = 'meteors-table__row';
 const selectedClass = '--selected';
 const openClass = '--open';
+const activeClass = '--active';
+const animateClass = '--animate';
 const detailsPanel = 'item-details';
 
+function $(selector) {
+  const elements = Array.from(document.querySelectorAll(selector));
+  
+  if (elements.length === 1) {
+    return elements[0];
+  }
+
+  return elements;
+}
+
+function openTooltip(tooltipId) {
+  $(tooltipId).classList.add(openClass);
+}
+
+function closeTooltip(tooltipId) {
+  $(tooltipId).classList.remove(openClass);
+}
+
+function setActiveTab(tab) {
+  const tabs = $('[data-tab-nav]');
+  const tabContents = $('[data-tab-content]');
+
+  tabs.forEach(tabNav => tabNav.classList.remove(activeClass));
+  tabContents.forEach(content => content.classList.remove(activeClass));
+
+  tabs.find((nav) => nav.dataset.tabNav === tab).classList.add(activeClass);
+  tabContents.find((content) => content.dataset.tabContent === tab).classList.add(activeClass);
+}
+
 function closeDetailsPanel() {
-  document.querySelector(`.${detailsPanel}`).classList.remove(openClass);
+  $(`.${detailsPanel}`).classList.remove(openClass);
+  resetSelectedItems();
 }
 
 function resetSelectedItems() {
-  const rows = Array.from(document.querySelectorAll(`.${row}`));
+  const rows = $(`.${row}`);
   rows.forEach(rowItem => rowItem.classList.remove(selectedClass));
 }
 
-function setSelectedItem() {
+function setSelectedItem(item) {
+  const parent = item.parentElement;
+  resetSelectedItems();
+  parent.classList.add(selectedClass);
+  $(`.${detailsPanel}`).classList.add(openClass);
+}
+
+function animateButton(button) {
+  button.classList.add(animateClass);
+
+  setTimeout(() => {
+    button.classList.remove(animateClass);
+  }, 1000);
+}
+
+function handleClickEvents() {
   document.addEventListener('click', (e) => {
-    const parent = e.target.parentElement;
-    if (parent.className.includes(row)) {
-      resetSelectedItems();
-      parent.classList.add(selectedClass);
-      document.querySelector(`.${detailsPanel}`).classList.add(openClass);
+    const el = e.target;
+
+    if (typeof el.parentElement.className === 'string' && el.parentElement.className.includes(row)) {
+      setSelectedItem(el);
+    }
+
+    if (typeof el.className === 'string' && el.className.includes('form__button')) {
+      animateButton(el);
     }
   });
 }

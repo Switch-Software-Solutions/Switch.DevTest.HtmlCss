@@ -1,0 +1,41 @@
+#icons {
+  display: none;
+}
+
+.icon {
+  $i: &;
+
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: inline-block;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    fill: currentColor;
+
+    &#{$i}__explode {
+      width: 17px;
+      height: 18px;
+      left: 60%;
+      top: 60%;
+    }
+
+    &#{$i}__save {
+      width: 17px;
+      height: 18px;
+      left: 40%;
+      top: 50%;
+    }
+
+    &#{$i}__tooltip {
+      left: 68%;
+      top: 63%;
+    }
+  }
+}
